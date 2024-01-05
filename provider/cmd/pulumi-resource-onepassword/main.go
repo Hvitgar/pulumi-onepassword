@@ -19,9 +19,9 @@ package main
 import (
 	_ "embed"
 
+	onepassword "github.com/Hvitgar/pulumi-onepassword/provider"
+	"github.com/Hvitgar/pulumi-onepassword/provider/pkg/version"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
-	onepassword "github.com/pulumi/pulumi-onepassword/provider"
-	"github.com/pulumi/pulumi-onepassword/provider/pkg/version"
 )
 
 //go:embed schema-embed.json

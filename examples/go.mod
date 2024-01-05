@@ -1,3 +1,3 @@
-module github.com/pulumi/pulumi-onepassword/examples
+module github.com/Hvitgar/pulumi-onepassword/examples
 
 go 1.21

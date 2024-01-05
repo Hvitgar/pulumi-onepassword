@@ -28,9 +28,9 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
 
 	// Replace this provider with the provider you are bridging.
-	onepassword "github.com/iwahbe/terraform-provider-onepassword/provider"
+	onepassword "github.com/1Password/terraform-provider-onepassword/onepassword"
 
-	"github.com/pulumi/pulumi-onepassword/provider/pkg/version"
+	"github.com/Hvitgar/pulumi-onepassword/provider/pkg/version"
 )
 
 // all of the token components used below.
@@ -58,16 +58,16 @@ func Provider() tfbridge.ProviderInfo {
 	// Create a Pulumi provider mapping
 	prov := tfbridge.ProviderInfo{
 		// Instantiate the Terraform provider
-		P:    shimv2.NewProvider(onepassword.New(version.Version)()),
+		P:    shimv2.NewProvider(onepassword.Provider()),
 		Name: "onepassword",
 		// DisplayName is a way to be able to change the casing of the provider
 		// name when being displayed on the Pulumi registry
-		DisplayName: "",
+		DisplayName: "1Password",
 		// The default publisher for all packages is Pulumi.
 		// Change this to your personal name (or a company name) that you
 		// would like to be shown in the Pulumi Registry if this package is published
 		// there.
-		Publisher: "Pulumi",
+		Publisher: "Benjamin Mitzkus",
 		// LogoURL is optional but useful to help identify your package in the Pulumi Registry
 		// if this package is published there.
 		//
@@ -85,10 +85,10 @@ func Provider() tfbridge.ProviderInfo {
 		Keywords:   []string{"pulumi", "onepassword", "category/cloud"},
 		License:    "Apache-2.0",
 		Homepage:   "https://www.pulumi.com",
-		Repository: "https://github.com/pulumi/pulumi-onepassword",
+		Repository: "https://github.com/Hvitgar/pulumi-onepassword",
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
 		// should match the TF provider module's require directive, not any replace directives.
-		GitHubOrg:    "",
+		GitHubOrg:    "1Password",
 		MetadataInfo: tfbridge.NewProviderMetadata(metadata),
 		Config:       map[string]*tfbridge.SchemaInfo{
 			// Add any required configuration here, or remove the example below if

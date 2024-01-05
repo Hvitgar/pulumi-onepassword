@@ -15,9 +15,9 @@
 package main
 
 import (
+	onepassword "github.com/Hvitgar/pulumi-onepassword/provider"
+	"github.com/Hvitgar/pulumi-onepassword/provider/pkg/version"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
-	onepassword "github.com/pulumi/pulumi-onepassword/provider"
-	"github.com/pulumi/pulumi-onepassword/provider/pkg/version"
 )
 
 func main() {
