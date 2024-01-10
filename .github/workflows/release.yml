@@ -4,6 +4,7 @@ on:
     tags:
       - v*.*.*
 env:
+  PROVIDER: onepassword
   # THIS GITHUB_TOKEN IS A REQUIREMENT TO BE ABLE TO WRITE TO GH RELEASES
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -41,6 +42,12 @@ jobs:
         run: tar -zcf ${{ github.workspace }}/bin/provider.tar.gz -C ${{
           github.workspace }}/bin/ pulumi-resource-${{ env.PROVIDER }}
           pulumi-tfgen-${{ env.PROVIDER }}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.PROVIDER }}-provider.tar.gz
+          path: ${{ github.workspace }}/bin/provider.tar.gz
+          retention-days: 30
     strategy:
       fail-fast: true
       matrix:
