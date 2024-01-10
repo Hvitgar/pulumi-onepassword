@@ -29,7 +29,18 @@ jobs:
       - name: Install Go
         uses: actions/setup-go@v4
         with:
+          cache-dependency-path: sdk/go.sum
           go-version: ${{matrix.goversion}}
+      - name: Install pulumictl
+        uses: jaxxstorm/action-install-gh-release@v1.5.0
+        with:
+          repo: pulumi/pulumictl
+      - name: Build tfgen & provider binaries
+        run: make provider
+      - name: Tar provider binaries
+        run: tar -zcf ${{ github.workspace }}/bin/provider.tar.gz -C ${{
+          github.workspace }}/bin/ pulumi-resource-${{ env.PROVIDER }}
+          pulumi-tfgen-${{ env.PROVIDER }}
     strategy:
       fail-fast: true
       matrix:
@@ -46,13 +57,8 @@ jobs:
       - name: Install Go
         uses: actions/setup-go@v4
         with:
+          cache-dependency-path: sdk/go.sum
           go-version: ${{matrix.goversion}}
-      - name: Build tfgen & provider binaries
-        run: make provider
-      - name: Tar provider binaries
-        run: tar -zcf ${{ github.workspace }}/bin/provider.tar.gz -C ${{
-          github.workspace }}/bin/ pulumi-resource-${{ env.PROVIDER }}
-          pulumi-tfgen-${{ env.PROVIDER }}
       - name: Install pulumictl
         uses: jaxxstorm/action-install-gh-release@v1.5.0
         with:
