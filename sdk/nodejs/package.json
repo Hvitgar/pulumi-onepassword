@@ -23,6 +23,7 @@
     },
     "pulumi": {
         "resource": true,
-        "name": "onepassword"
+        "name": "onepassword",
+        "server": "https://github.com/Hvitgar/pulumi-onepassword/releases/download/v${VERSION}"
     }
 }

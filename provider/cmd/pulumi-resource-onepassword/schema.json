@@ -11,6 +11,7 @@
     "license": "Apache-2.0",
     "attribution": "This Pulumi package is based on the [`onepassword` Terraform Provider](https://github.com/1Password/terraform-provider-onepassword).",
     "repository": "https://github.com/Hvitgar/pulumi-onepassword",
+    "pluginDownloadURL": "https://github.com/Hvitgar/pulumi-onepassword/releases/download/v${VERSION}",
     "publisher": "Benjamin Mitzkus",
     "meta": {
         "moduleFormat": "(.*)(?:/[^/]*)"

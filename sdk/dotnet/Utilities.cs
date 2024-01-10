@@ -53,6 +53,7 @@ namespace bmitzkus.Onepassword
         {
             var dst = src ?? new global::Pulumi.InvokeOptions{};
             dst.Version = src?.Version ?? Version;
+            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "https://github.com/Hvitgar/pulumi-onepassword/releases/download/v${VERSION}";
             return dst;
         }
 
