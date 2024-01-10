@@ -60,6 +60,8 @@ jobs:
     steps:
       - name: Publish SDKs
         uses: pulumi/pulumi-package-publisher@v0.0.6
+        with:
+          sdk: nodejs
     strategy:
       fail-fast: true
       matrix:
@@ -67,11 +69,6 @@ jobs:
           - 3.1.301
         goversion:
           - 1.18.x
-        language:
-          - nodejs
-          - python
-          - dotnet
-          - go
         nodeversion:
           - 20.x
         pythonversion:
