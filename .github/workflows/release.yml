@@ -5,6 +5,7 @@ on:
       - v*.*.*
 env:
   PROVIDER: onepassword
+
   # THIS GITHUB_TOKEN IS A REQUIREMENT TO BE ABLE TO WRITE TO GH RELEASES
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -126,6 +127,7 @@ jobs:
         language:
           - nodejs
           - go
+          - python
   publish_sdk:
     name: Publish SDKs
     runs-on: ubuntu-latest
@@ -134,7 +136,7 @@ jobs:
       - name: Publish SDKs
         uses: pulumi/pulumi-package-publisher@v0.0.13
         with:
-          sdk: nodejs
+          sdk: nodejs,python
     strategy:
       fail-fast: true
       matrix:
