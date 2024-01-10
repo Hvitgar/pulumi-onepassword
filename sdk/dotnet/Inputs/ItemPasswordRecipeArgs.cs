@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace Hvitgar.Onepassword.Inputs
+namespace bmitzkus.Onepassword.Inputs
 {
 
     public sealed class ItemPasswordRecipeArgs : global::Pulumi.ResourceArgs

@@ -13,7 +13,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as onepassword from "@hvitgar/pulumi-onepassword";
+ * import * as onepassword from "@bmitzkus/pulumi-onepassword";
  *
  * const demoPassword = new onepassword.Item("demoPassword", {
  *     vault: _var.demo_vault,

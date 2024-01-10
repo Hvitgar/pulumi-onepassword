@@ -486,7 +486,7 @@ class Item(pulumi.CustomResource):
 
         ```python
         import pulumi
-        import hvitgar_pulumi_onepassword as onepassword
+        import bmitzkus_pulumi_onepassword as onepassword
 
         demo_password = onepassword.Item("demoPassword",
             vault=var["demo_vault"],
@@ -549,7 +549,7 @@ class Item(pulumi.CustomResource):
 
         ```python
         import pulumi
-        import hvitgar_pulumi_onepassword as onepassword
+        import bmitzkus_pulumi_onepassword as onepassword
 
         demo_password = onepassword.Item("demoPassword",
             vault=var["demo_vault"],

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace Hvitgar.Onepassword
+namespace bmitzkus.Onepassword
 {
     /// <summary>
     /// The provider type for the onepassword package. By default, resources use package-wide configuration

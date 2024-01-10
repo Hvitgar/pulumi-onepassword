@@ -17,7 +17,7 @@ def readme():
         return "onepassword Pulumi Package - Development Version"
 
 
-setup(name='hvitgar_pulumi_onepassword',
+setup(name='bmitzkus_pulumi_onepassword',
       python_requires='>=3.7',
       version=VERSION,
       description="A Pulumi package for creating and managing onepassword cloud resources.",
@@ -31,7 +31,7 @@ setup(name='hvitgar_pulumi_onepassword',
       license='Apache-2.0',
       packages=find_packages(),
       package_data={
-          'hvitgar_pulumi_onepassword': [
+          'bmitzkus_pulumi_onepassword': [
               'py.typed',
               'pulumi-plugin.json',
           ]

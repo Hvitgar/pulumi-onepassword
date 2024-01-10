@@ -1,5 +1,5 @@
 {
-    "name": "@hvitgar/pulumi-onepassword",
+    "name": "@bmitzkus/pulumi-onepassword",
     "version": "${VERSION}",
     "description": "A Pulumi package for creating and managing onepassword cloud resources.",
     "keywords": [

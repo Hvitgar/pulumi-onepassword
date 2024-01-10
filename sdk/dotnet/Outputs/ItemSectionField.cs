@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace Hvitgar.Onepassword.Outputs
+namespace bmitzkus.Onepassword.Outputs
 {
 
     [OutputType]

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace Hvitgar.Onepassword
+namespace bmitzkus.Onepassword
 {
     /// <summary>
     /// A 1Password item.
@@ -19,7 +19,7 @@ namespace Hvitgar.Onepassword
     /// using System.Collections.Generic;
     /// using System.Linq;
     /// using Pulumi;
-    /// using Onepassword = Hvitgar.Onepassword;
+    /// using Onepassword = bmitzkus.Onepassword;
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {

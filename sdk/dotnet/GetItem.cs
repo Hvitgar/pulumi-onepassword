@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace Hvitgar.Onepassword
+namespace bmitzkus.Onepassword
 {
     public static class GetItem
     {

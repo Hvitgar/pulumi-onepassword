@@ -14,10 +14,10 @@ from . import outputs
 
 # Make subpackages available:
 if typing.TYPE_CHECKING:
-    import hvitgar_pulumi_onepassword.config as __config
+    import bmitzkus_pulumi_onepassword.config as __config
     config = __config
 else:
-    config = _utilities.lazy_import('hvitgar_pulumi_onepassword.config')
+    config = _utilities.lazy_import('bmitzkus_pulumi_onepassword.config')
 
 _utilities.register(
     resource_modules="""
@@ -25,7 +25,7 @@ _utilities.register(
  {
   "pkg": "onepassword",
   "mod": "index/item",
-  "fqn": "hvitgar_pulumi_onepassword",
+  "fqn": "bmitzkus_pulumi_onepassword",
   "classes": {
    "onepassword:index/item:Item": "Item"
   }
@@ -37,7 +37,7 @@ _utilities.register(
  {
   "pkg": "onepassword",
   "token": "pulumi:providers:onepassword",
-  "fqn": "hvitgar_pulumi_onepassword",
+  "fqn": "bmitzkus_pulumi_onepassword",
   "class": "Provider"
  }
 ]
