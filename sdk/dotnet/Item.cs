@@ -176,7 +176,7 @@ namespace bmitzkus.Onepassword
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
-                PluginDownloadURL = "https://github.com/Hvitgar/pulumi-onepassword/releases/download/v${VERSION}",
+                PluginDownloadURL = "https://github.com/Hvitgar/pulumi-onepassword/releases/download/${VERSION}",
                 AdditionalSecretOutputs =
                 {
                     "password",

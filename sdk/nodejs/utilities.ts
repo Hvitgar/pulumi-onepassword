@@ -53,7 +53,7 @@ export function getVersion(): string {
 
 /** @internal */
 export function resourceOptsDefaults(): any {
-    return { version: getVersion(), pluginDownloadURL: "https://github.com/Hvitgar/pulumi-onepassword/releases/download/v${VERSION}" };
+    return { version: getVersion(), pluginDownloadURL: "https://github.com/Hvitgar/pulumi-onepassword/releases/download/${VERSION}" };
 }
 
 /** @internal */
